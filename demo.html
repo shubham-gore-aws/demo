@@ -1,0 +1,195 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+}
+
+.circle:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+}
+
+.circle:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 5px solid #999;
+  clip-path: polygon(50% 50%, 100% 50%, 50% 100%);
+}
+
+.label {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="circle">
+    75%
+  </div>
+  <div class="circle">
+    83%
+  </div>
+  <div class="circle">
+    25%
+  </div>
+  <div class="circle">
+    95%
+  </div>
+</div>
+
+<div class="container">
+  <div class="label">INTUITION</div>
+  <div class="label">CREATIVITY</div>
+  <div class="label">PURE LUCK</div>
+  <div class="label">AWESOMENESS</div>
+</div>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.progress-bar {
+  position: relative;
+  width: 300px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.progress-bar.bar1::before {
+  background-image: linear-gradient(to right, #87ceeb, #e0ffff, #9400d3, #e6e6fa, #ffffff);
+}
+
+.progress-bar.bar2::before {
+  background-image: linear-gradient(to right, #90ee90, #adff2f, #ffd700, #90ee90, #00ff00, #9400d3, #e6e6fa, #ffffff, #f08080, #faa07a, #ffdab9, #f5f5dc, #ffffff);
+}
+
+.progress-bar.bar3::before {
+  background-image: linear-gradient(to right, #87ceeb, #e0ffff, #0000ff, #800080, #ff1493, #ffffff);
+}
+
+.progress-bar.bar4::before {
+  background-image: linear-gradient(to right, #f08080, #faa07a, #ffdab9, #f5f5dc, #ffffff);
+}
+
+.progress-bar span {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #333;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <div class="progress-bar bar1" style="width: 200px;">
+    <span>Developement</span>
+  </div>
+  <span>70%</span>
+  <div class="progress-bar bar1" style="width: 250px;">
+    <span>Developement</span>
+  </div>
+</div>
+
+<div>
+  <div class="progress-bar bar2" style="width: 250px;">
+    <span>Developement</span>
+  </div>
+  <span>100%</span>
+  <div class="progress-bar bar2" style="width: 300px;">
+    <span>Developement</span>
+  </div>
+</div>
+
+<div>
+  <div class="progress-bar bar3" style="width: 200px;">
+    <span>Developement</span>
+  </div>
+  <span>60%</span>
+  <div class="progress-bar bar3" style="width: 300px;">
+    <span>Developement</span>
+  </div>
+</div>
+
+<div>
+  <div class="progress-bar bar4" style="width: 250px;">
+    <span>Developement</span>
+  </div>
+  <span>75%</span>
+  <div class="progress-bar bar4" style="width: 350px;">
+    <span>Developement</span>
+  </div>
+</div>
+
+</body>
+</html>
